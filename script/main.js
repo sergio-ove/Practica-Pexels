@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', (ev) => {
 
-        ev.preventDefault()
 
         if (ev.target.className == "inputSubmit") {
+            ev.preventDefault()
             espacioUsuario.innerHTML = ""
             titularUsuario.innerHTML = ""
             boton.innerHTML = ""
@@ -44,11 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(palabraUsuario);
             pintarPalabraClave(palabraUsuario)
 
-        } if (ev.target.className == "imagenAutores"){
-            // pintarCollage()
+        } if (ev.target.className == "claseBorrar") {
+            borrarBusqueda()
         }
-
-
 
     })
 
@@ -91,6 +89,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
+
+    const init = () => {
+
+        pintarPrincipales()
+        pintarMisFotos()
+
+        const url = location.search;
+
+        let params = new URLSearchParams(url);
+        console.log(params);
+
+        const textoUrl = params.get("imagen");
+        console.log(textoUrl);
+
+        if (textoUrl) {
+
+            pintarCollage(textoUrl)
+
+
+        } 
+
+        // if (params.has("texto")) {
+
+        //     const texto = params.get("texto");
+        //     console.log(texto);
+
+        //     pintarBotones();
+        //     pintarFotos(texto);
+
+        // } else if (params.has("id")) {
+
+        //     const id = params.get("id");
+        //     pintarFotoGrande(id);
+
+        // }
+
+    };
 
 
     const numerosAleatorios = () => {
@@ -208,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const enlaceFoto = document.createElement('A')
             enlaceFoto.href = `fotoGrande.html?imagen=${element.categoria}`
+            enlaceFoto.textContent = 'Encontrar fotos relacionadas'
             enlaceFoto.append(imagenAutor)
 
             figureAutor.append(enlaceFoto)
@@ -219,25 +255,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    const pintarCollage = () => {
+    const pintarCollage = async (palabraClave) => {
 
-        const url = location.search;
-        console.log(url);
+        const arrayDatos = await consulta(`/search?query=${palabraClave}&per_page=10`)
+        console.log(arrayDatos);
 
-        let params = new URLSearchParams(url);
-        console.log(params);
+        const miArray = arrayDatos.datos.photos
+
+        miArray.forEach((element) => {
+
+            const figureTema = document.createElement('FIGURE')
+
+            const imagenTema = document.createElement('IMG')
+            imagenTema.src = element.src.medium
+            imagenTema.classList.add('imagenTema')
+
+            figureTema.append(imagenTema)
+
+            sectionCollage.append(figureTema)
+
+        })
+
+
     }
 
-    // const borrarBusqueda = () => {
-    //     espacioUsuario.innerHTML = ""
-    //     titularUsuario.innerHTML = ""
-    //     boton.innerHTML = ""
-    // }
+    const borrarBusqueda = () => {
+        espacioUsuario.innerHTML = ""
+        titularUsuario.innerHTML = ""
+        boton.innerHTML = ""
+    }
 
-
-
-    pintarPrincipales()
-    pintarMisFotos()
+    init()
 
 
 

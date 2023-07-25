@@ -6,75 +6,146 @@
 
 body {
     background-color: rgb(231, 206, 184);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img{
+img {
     width: 100%;
     min-height: 220px;
     max-height: 330px;
+    border-radius: 20px;
 }
+
+.divButon{
+    text-align: center;
+    
+}
+
+.claseBorrar{
+    width: 200px;
+    height: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(24, 23, 97);
+    font-size: 20px;
+}
+
 
 
 
 @media screen and (max-width:768px) {
-    .claseFormulario{
+    .claseFormulario {
         display: flex;
         flex-direction: column;
+        margin-top: 15px;
     }
 
-    .claseFormulario input{
+    .claseFormulario input {
         text-align: center;
-    
+        height: 40px;
+        padding: 5px;
+        border: black 1px solid;
     }
 
-    .h1Tendencias{
+    .h1Tendencias {
         text-align: center;
         font-size: 40px;
         margin-top: 30px;
-        
+
     }
 
-    .claseSection{
+    .claseSection {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        margin-bottom: 20px;
+
     }
 
-    .figureTresFotos{
+    .figureTresFotos {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
         padding: 5px;
         width: 300px;
         text-align: center;
+        color: black;
+        font-size: 20px;
     }
 
-    .figureTresFotos img{
+    .figureTresFotos img {
         padding: 10px;
     }
 
-    .h1MisFotos{
+    .h1MisFotos {
         font-size: 25px;
         text-align: center;
         margin-top: 50px;
-        background-color:darkcyan;
+        font-size: 40px;
+        margin-bottom: 20px;
     }
 
-    .claseSectionAutor{
+    .claseSectionAutor {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color:darkcyan;
+        background-color: rgb(190, 215, 215);
     }
 
-    .claseSectionAutor figure{
+    .claseSectionAutor figure {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
         padding: 5px;
         width: 300px;
         text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .h1Titular{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .claseUsuario{
+        display: flex;
+        flex-direction: row;
+        width: 620px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .claseUsuario figure{
+        margin-bottom: 20px;
+        width: 270px;
+        background-color: rgb(181, 207, 204);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 5px;
+    }
+
+    .claseUsuario img{
+        padding: 10px;
+        font-size: 20px;
+
+    }
+
+    .classCollection{
+        background-color: rgb(223, 215, 250);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .classCollection figure{
+        width: 350px;
+        margin: 10px;
     }
 }
-
