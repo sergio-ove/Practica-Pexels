@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(231, 206, 184);
+}
+
+img{
+    width: 100%;
+    min-height: 220px;
+    max-height: 330px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .claseFormulario{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .claseFormulario input{
+        text-align: center;
+    
+    }
+
+    .h1Tendencias{
+        text-align: center;
+        font-size: 40px;
+        margin-top: 30px;
+        
+    }
+
+    .claseSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .figureTresFotos{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 5px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .figureTresFotos img{
+        padding: 10px;
+    }
+
+    .h1MisFotos{
+        font-size: 25px;
+        text-align: center;
+        margin-top: 50px;
+        background-color:darkcyan;
+    }
+
+    .claseSectionAutor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color:darkcyan;
+    }
+
+    .claseSectionAutor figure{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 5px;
+        width: 300px;
+        text-align: center;
+    }
+}
+
