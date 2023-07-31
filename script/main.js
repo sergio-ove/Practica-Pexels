@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagenAutor.classList.add('imagenAutores')
 
             const enlaceFoto = document.createElement('A')
-            enlaceFoto.href = `fotoGrande.html?imagen=${element.categoria}`
+            enlaceFoto.href = `collage.html?imagen=${element.categoria}`
             enlaceFoto.textContent = 'Encontrar fotos relacionadas'
             enlaceFoto.append(imagenAutor)
 
