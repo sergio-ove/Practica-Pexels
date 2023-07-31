@@ -1,4 +1,4 @@
-# Practica-Pexels
+# Práctica-Pexels
 
 Práctica mostrando imágenes a traves de la API de pexels utilizando las siguientes tecnologías:
 
