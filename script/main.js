@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fragment = document.createDocumentFragment('#idbuton')
     const url = 'https://api.pexels.com/v1/'
     const token = 'ENXbvUOKkmUuD55KAaHBOma05htDc24r3MyyIbu8Ys2VPTYfLvTRjyS2'
-    const form = document.querySelector('#formulario')
+    const headerFotoGrande = document.querySelector('#headerGrande')
 
     const arrayMisFotos = [
 
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } if (ev.target.className == "claseBorrar") {
             borrarBusqueda()
+          
         }
 
     })
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pintarPrincipales()
         pintarMisFotos()
 
+
         const url = location.search;
 
         let params = new URLSearchParams(url);
@@ -108,22 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pintarCollage(textoUrl)
 
 
-        } 
+        }
 
-        // if (params.has("texto")) {
-
-        //     const texto = params.get("texto");
-        //     console.log(texto);
-
-        //     pintarBotones();
-        //     pintarFotos(texto);
-
-        // } else if (params.has("id")) {
-
-        //     const id = params.get("id");
-        //     pintarFotoGrande(id);
-
-        // }
 
     };
 
@@ -262,6 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const miArray = arrayDatos.datos.photos
 
+        const h1FotoGrande = document.createElement('H1')
+        h1FotoGrande.classList.add('h1FotoGrande')
+        h1FotoGrande.textContent = `Resultados relacionados con "${palabraClave}" `
+
+        headerFotoGrande.append(h1FotoGrande)
+
+
         miArray.forEach((element) => {
 
             const figureTema = document.createElement('FIGURE')
@@ -277,13 +272,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
 
+
     }
 
     const borrarBusqueda = () => {
         espacioUsuario.innerHTML = ""
         titularUsuario.innerHTML = ""
         boton.innerHTML = ""
+
     }
+
+
 
     init()
 

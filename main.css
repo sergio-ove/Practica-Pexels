@@ -12,55 +12,160 @@ body {
 img {
     width: 100%;
     min-height: 220px;
-    max-height: 330px;
+    max-height: 340px;
     border-radius: 20px;
+    padding: 10px;
 }
 
-.divButon{
+.h1Principal {
     text-align: center;
-    
+    font-size: 50px;
+    background-color: rgb(90, 178, 137);
+    padding: 20px;
 }
 
-.claseBorrar{
+.divButon {
+    text-align: center;
+
+}
+
+.claseBorrar {
     width: 200px;
     height: 40px;
 }
 
-a{
+a {
     text-decoration: none;
     color: rgb(24, 23, 97);
     font-size: 20px;
 }
 
+.claseFormulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.claseFormulario input {
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+    border: black 1px solid;
+    margin: 5px 5px 5px 5px;
+}
+
+.h1Tendencias {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+
+}
 
 
+.claseSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
 
-@media screen and (max-width:768px) {
-    .claseFormulario {
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px;
-    }
 
-    .claseFormulario input {
-        text-align: center;
-        height: 40px;
-        padding: 5px;
-        border: black 1px solid;
-    }
+.figureTresFotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
 
-    .h1Tendencias {
-        text-align: center;
-        font-size: 40px;
-        margin-top: 30px;
 
-    }
+.h1MisFotos {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.claseSectionAutor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.claseSectionAutor figure {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.classCollection figure {
+    width: 350px;
+    margin: 10px;
+}
+
+.claseUsuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.claseUsuario figure {
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.h1Titular {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.classCollection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divEnlace {
+    text-align: center;
+    margin-top: 40px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.enlacePrincipal {
+    font-size: 30px;
+    color: rgb(134, 67, 18);
+}
+
+.h1FotoGrande {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.classCollection {
+    margin-top: 50px;
+}
+
+
+@media screen and (min-width:768px) {
 
     .claseSection {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin-bottom: 20px;
+        justify-content: space-around;
 
     }
 
@@ -69,15 +174,11 @@ a{
         flex-direction: column;
         margin-top: 20px;
         padding: 5px;
-        width: 300px;
         text-align: center;
         color: black;
         font-size: 20px;
     }
 
-    .figureTresFotos img {
-        padding: 10px;
-    }
 
     .h1MisFotos {
         font-size: 25px;
@@ -89,63 +190,98 @@ a{
 
     .claseSectionAutor {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        background-color: rgb(190, 215, 215);
     }
 
     .claseSectionAutor figure {
         display: flex;
         flex-direction: column;
         padding: 5px;
-        width: 300px;
         text-align: center;
         margin-bottom: 20px;
     }
 
-    .h1Titular{
+    .h1Titular {
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
-    .claseUsuario{
+    .claseUsuario {
         display: flex;
         flex-direction: row;
-        width: 620px;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         margin: 0 auto;
         text-align: center;
         padding: 15px;
         margin-bottom: 20px;
     }
 
-    .claseUsuario figure{
+    .claseUsuario figure {
         margin-bottom: 20px;
-        width: 270px;
-        background-color: rgb(181, 207, 204);
         padding: 20px;
         border-radius: 15px;
         margin: 5px;
     }
 
-    .claseUsuario img{
-        padding: 10px;
-        font-size: 20px;
-
-    }
-
-    .classCollection{
-        background-color: rgb(223, 215, 250);
+    .classCollection {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-around;
     }
-    
-    .classCollection figure{
+
+    .classCollection figure {
         width: 350px;
         margin: 10px;
     }
+
+}
+
+@media screen and (min-width:992px) {
+    .claseFormulario {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .claseSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+
+    }
+
+
+    @media screen and (min-width:1200px) {
+        .classCollection {
+            margin-top: 100px;
+        }
+
+
+    }
+
+    .claseSection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .claseSectionAutor figure {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 350px;
+    }
+
+
+
 }
